@@ -8,6 +8,9 @@ import Card from "./components/shared/Card";
 import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import AboutPage from "./pages/AboutPage";
+import AboutIconLink from "./components/AboutIconLink";
+import { Link } from "react-router-dom";
+
 
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
@@ -28,10 +31,7 @@ function App() {
       <div className="container">
         <BrowserRouter>
           <Routes>
-            <Route
-              exact
-              path="/"
-              element={
+            <Route exact path="/" element={
                 <>
                   <FeedbackForm handleAdd={addFeedback} />
                   <FeedbackStats feedback={feedback} />
@@ -45,6 +45,7 @@ function App() {
             <Route exact path="/about" element={<AboutPage />}></Route>
           </Routes>
         </BrowserRouter>
+        <AboutIconLink />
       </div>
     </>
   );
