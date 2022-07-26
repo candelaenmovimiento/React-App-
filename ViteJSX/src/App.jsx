@@ -26,6 +26,11 @@ function App() {
     <>
       <Header />
       <div className="container">
+      <FeedbackForm handleAdd={addFeedback} />
+          <FeedbackStats feedback={feedback} />
+          <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+
+         {/* aca se pone choto */}
         <BrowserRouter>
         <Routes>
           <Route path="/" element {
@@ -36,9 +41,11 @@ function App() {
             </>
           } 
         />
-        <Route path="/about" element {...<AboutPage/>}> </Route>
+        <Route exact path="/about" element {...<AboutPage/>}> </Route>
         </Routes>
-        </BrowserRouter>        
+        </BrowserRouter>   
+
+        {/* Hasta aca, chotisimo      */}
       </div>
     </>
   );
