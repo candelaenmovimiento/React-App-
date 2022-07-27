@@ -52,6 +52,7 @@ const editFeedback = (item) => {
         deleteFeedback,
         addFeedback,
         editFeedback,
+        feedbackEdit,
     }}>
         {children}
     </FeedbackContext.Provider>
