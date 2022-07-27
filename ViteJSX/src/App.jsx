@@ -11,7 +11,6 @@ import AboutPage from "./pages/AboutPage";
 import AboutIconLink from "./components/AboutIconLink";
 import { Link } from "react-router-dom";
 
-
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
 
@@ -31,7 +30,10 @@ function App() {
       <div className="container">
         <BrowserRouter>
           <Routes>
-            <Route exact path="/" element={
+            <Route
+              exact
+              path="/"
+              element={
                 <>
                   <FeedbackForm handleAdd={addFeedback} />
                   <FeedbackStats feedback={feedback} />
