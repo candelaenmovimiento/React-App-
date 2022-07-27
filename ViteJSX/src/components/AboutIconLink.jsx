@@ -4,11 +4,9 @@ import { FaQuestion } from "react-icons/fa";
 function AboutIconLink() {
   return (
     <div className="about-link">
-      <BrowserRouter>
-        <Link to="/about">
-          <FaQuestion size={30} />
-        </Link>
-      </BrowserRouter>
+      <a href="/about">
+        <FaQuestion size={30} />
+      </a>
     </div>
   );
 }

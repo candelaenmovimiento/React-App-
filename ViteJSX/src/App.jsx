@@ -8,6 +8,10 @@ import Card from "./components/shared/Card";
 import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import AboutPage from "./pages/AboutPage";
+
+import { FeedbackProvider } from "./context/FeedbackContext";
+
+
 import AboutIconLink from "./components/AboutIconLink";
 import { Link } from "react-router-dom";
 
@@ -26,6 +30,7 @@ function App() {
   };
   return (
     <>
+    <FeedbackProvider>
       <Header />
       <div className="container">
         <BrowserRouter>
@@ -49,6 +54,7 @@ function App() {
         </BrowserRouter>
         <AboutIconLink />
       </div>
+      </FeedbackProvider>
     </>
   );
 }
