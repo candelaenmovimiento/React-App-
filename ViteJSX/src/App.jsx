@@ -8,12 +8,9 @@ import Card from "./components/shared/Card";
 import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import AboutPage from "./pages/AboutPage";
-
 import { FeedbackProvider } from "./context/FeedbackContext";
-
-
 import AboutIconLink from "./components/AboutIconLink";
-import { Link } from "react-router-dom";
+
 
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
@@ -30,9 +27,10 @@ function App() {
   };
   return (
     <>
-    <FeedbackProvider>
+    
       <Header />
       <div className="container">
+      <FeedbackProvider>
         <BrowserRouter>
           <Routes>
             <Route
@@ -50,11 +48,13 @@ function App() {
               }
             />
             <Route exact path="/about" element={<AboutPage />}></Route>
+            
           </Routes>
+          <AboutIconLink />
         </BrowserRouter>
-        <AboutIconLink />
+        </FeedbackProvider>
       </div>
-      </FeedbackProvider>
+      
     </>
   );
 }
