@@ -5,7 +5,7 @@ function Spinner() {
     <img
       src={spinner}
       alt="Loading..."
-      style={{ width: 1000, margin: "auto", display: "block" }}
+      style={{ width: 50, margin: "auto", display: "block" }}
     />
   );
 }
